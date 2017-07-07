@@ -8,7 +8,7 @@
   "scripts": {
     "ng": "ng",
     "build": "ng build",
-    "start": "node server/app.js",
+    "start": "node dist/server/app.js",
     "predev": "tsc -p server",
     "dev": "concurrently \"mongod\" \"ng serve -pc proxy.conf.json --open\" \"tsc -w -p server\" \"nodemon server/app.js\"",
     "prod": "concurrently \"mongod\" \"ng build -aot -prod && tsc -p server && node dist/server/app.js\"",
