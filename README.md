@@ -31,6 +31,8 @@ From project root folder install all the dependencies: npm i
 
 ## Development mode
 
+tsc -w -p server/: to generate js from TS.
+
 npm run dev: concurrently execute MongoDB, Angular build, TypeScript compiler and Express server.
 
 A window will automatically open at localhost:4200. Angular and Express files are being watched. Any change automatically creates a new bundle, restart Express server and reload your browser
