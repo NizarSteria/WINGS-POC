@@ -1,4 +1,4 @@
-# WingsPoc: Angular Full Stack
+# WingsPoc: Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
 
