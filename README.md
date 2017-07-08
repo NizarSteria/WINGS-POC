@@ -31,6 +31,8 @@ From project root folder install all the dependencies: npm i
 
 ## Development mode
 
+cp mongodb-osx-x86_64-2.6.7/bin/* /usr/local/bin/ (mongod in path)
+
 tsc -w -p server/: to generate js from TS.
 
 npm run dev: concurrently execute MongoDB, Angular build, TypeScript compiler and Express server.
