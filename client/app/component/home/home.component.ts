@@ -9,7 +9,15 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+  name: string;
+
+  message: string;
+
+  onClick() {
+    this.message = 'Hello ' + this.name;
+  }
   ngOnInit() {
   }
+
 
 }
