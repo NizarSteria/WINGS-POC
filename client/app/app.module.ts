@@ -21,7 +21,7 @@ import { UsersComponent } from './component/users/users.component';
 import { FooterComponent } from "./core/layout/footer/footer.component";
 import { HeaderComponent } from "./core/layout/header/header.component";
 
-import { InputTextModule, ButtonModule }  from 'primeng/primeng';
+import { InputTextModule, ButtonModule, TreeModule, TreeNode }  from 'primeng/primeng';
 
 
 @NgModule({
@@ -44,7 +44,8 @@ import { InputTextModule, ButtonModule }  from 'primeng/primeng';
     RoutingModule,
     SharedModule,
     InputTextModule,
-    ButtonModule
+    ButtonModule,
+    TreeModule
   ],
   providers: [
     AuthService,
