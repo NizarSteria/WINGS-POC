@@ -1,0 +1,19 @@
+Deploy using Heroku git
+
+Go to Heroku and create a new app
+Install Heroku CLI
+heroku login
+cd wings-poc/
+git init
+heroku git:remote -a wings-poc
+Download this repo and copy all files into wings-poc folder
+Edit .gitignore and remove line with /dist
+Edit .env and replace the MongoDB URI with a real remote MongoDB server. You can create a MongoDB server with Heroku or mLab.
+npm i
+ng build -prod or ng build -aot -prod
+tsc -p server
+git add .
+git commit -m "Going to Heroku"
+git push heroku master
+heroku open
+A window will open with your app online
