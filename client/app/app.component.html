@@ -1,44 +1,9 @@
 <div class="container-fluid">
 
-  <nav class="navbar  navbar-dark bg-primary">
-    <div class="nav navbar-nav">
-      <a routerLink="/home" class="nav-item nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-        <i class="fa fa-home"></i> Home
-      </a>
-      <a routerLink="/cats" class="nav-item nav-link" routerLinkActive="active">
-        <i class="fa fa-list"></i> Cats
-      </a>
-      <a routerLink="/login" class="nav-item nav-link" routerLinkActive="active" *ngIf="!auth.loggedIn">
-        <i class="fa fa-sign-in"></i> Login
-      </a>
-      <a routerLink="/register" class="nav-item nav-link" routerLinkActive="active" *ngIf="!auth.loggedIn">
-        <i class="fa fa-user-plus"></i> Register
-      </a>
-      <a routerLink="/account" class="nav-item nav-link" routerLinkActive="active" *ngIf="auth.loggedIn">
-        <i class="fa fa-user"></i> Account ({{auth.currentUser.username}})
-      </a>
-      <a routerLink="/admin" class="nav-item nav-link" routerLinkActive="active" *ngIf="auth.loggedIn && auth.isAdmin">
-        <i class="fa fa-lock"></i> Admin
-      </a>
-      <a routerLink="/logout" class="nav-item nav-link" routerLinkActive="active" *ngIf="auth.loggedIn">
-        <i class="fa fa-sign-out"></i> Logout
-      </a>
-      <a routerLink="/about" class="nav-item nav-link" routerLinkActive="active">
-        <i class="fa fa-list"></i> About
-      </a>
-    </div>
-  </nav>
+  <layout-header></layout-header>
 
   <router-outlet></router-outlet>
 
-<footer>
-  <nav class="navbar navbar-light bg-faded">
-        <ul class="nav navbar-nav">
-            <li class="nav-item active">
-                <small><a class="nav-link" target="_blank" href="https://github.com/NizarSteria/WINGS-POC"><i class="fa fa-github"></i> Angular 4 application by Nizar Aouissaoui</a></small>
-            </li>
-        </ul>
-    </nav>
-</footer>
+  <layout-footer></layout-footer>
 
 </div>

@@ -1,21 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { CatsComponent } from './cats/cats.component';
-import { AboutComponent } from './about/about.component';
-import { HomeComponent } from './home/home.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
-import { LogoutComponent } from './logout/logout.component';
-import { AccountComponent } from './account/account.component';
-import { AdminComponent } from './admin/admin.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { CatsComponent } from './component/cats/cats.component';
+import { AboutComponent } from './component/about/about.component';
+import { HomeComponent } from './component/home/home.component';
+import { RegisterComponent } from './component/register/register.component';
+import { LoginComponent } from './component/login/login.component';
+import { LogoutComponent } from './component/logout/logout.component';
+import { AccountComponent } from './component/account/account.component';
+import { AdminComponent } from './component/admin/admin.component';
+import { NotFoundComponent } from './component/not-found/not-found.component';
 
-import { AuthGuardLogin } from './services/auth-guard-login.service';
-import { AuthGuardAdmin } from './services/auth-guard-admin.service';
+import { AuthGuardLogin } from './core/services/auth-guard-login.service';
+import { AuthGuardAdmin } from './core/services/auth-guard-admin.service';
+import { UsersComponent } from "./component/users/users.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'users', component: UsersComponent },
   { path: 'about', component: AboutComponent },
   { path: 'cats', component: CatsComponent },
   { path: 'register', component: RegisterComponent },

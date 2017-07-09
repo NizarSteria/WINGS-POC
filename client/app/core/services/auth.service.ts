@@ -38,7 +38,7 @@ export class AuthService {
     this.loggedIn = false;
     this.isAdmin = false;
     this.currentUser = { _id: '', username: '', role: '' };
-    this.router.navigate(['/']);
+    this.router.navigate(['/home']);
   }
 
   decodeUserFromToken(token) {

@@ -43,3 +43,4 @@ A window will automatically open at localhost:4200. Angular and Express files ar
 
 npm run prod: run the project with a production bundle and AOT compilation listening at localhost:3000
 
+// https://thinkster.io/tutorials/building-real-world-angular-2-apps

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ToastComponent } from '../shared/toast/toast.component';
-import { AuthService } from '../services/auth.service';
-import { UserService } from '../services/user.service';
+import { UserService } from '../../core/services/user.service';
+import { ToastComponent } from "../../shared/toast/toast.component";
+import { AuthService } from "../../core/services/auth.service";
 
 @Component({
   selector: 'app-admin',
