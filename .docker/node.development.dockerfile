@@ -16,7 +16,7 @@ CMD [ "npm", "run dev" ]
 
 
 
-# Build: docker build -f node.dockerfile -t aouissaoui/node .
+# Build: docker build -f node.development.dockerfile -t aouissaoui/node .
 
 # Option 1
 # Start MongoDB and Node (link Node to MongoDB container with legacy linking)
