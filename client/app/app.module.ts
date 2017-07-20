@@ -22,8 +22,19 @@ import { FooterComponent } from "./core/layout/footer/footer.component";
 import { HeaderComponent } from "./core/layout/header/header.component";
 
 import { InputTextModule, ButtonModule, TreeModule, TreeNode }  from 'primeng/primeng';
+import { ProductComponent } from './component/product/product.component';
+import { CartComponent } from './component/cart/cart.component';
+import { ProductDetailComponent } from './component/product-detail/product-detail.component';
+import { ProductService } from "./core/services/products/product.service";
 
-
+export const SERVICES =  [
+    AuthService,
+    AuthGuardLogin,
+    AuthGuardAdmin,
+    CatService,
+    UserService,
+    ProductService
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +50,9 @@ import { InputTextModule, ButtonModule, TreeModule, TreeNode }  from 'primeng/pr
     UsersComponent,
     FooterComponent,
     HeaderComponent,
+    ProductComponent,
+    CartComponent,
+    ProductDetailComponent,
   ],
   imports: [
     RoutingModule,
@@ -48,11 +62,7 @@ import { InputTextModule, ButtonModule, TreeModule, TreeNode }  from 'primeng/pr
     TreeModule
   ],
   providers: [
-    AuthService,
-    AuthGuardLogin,
-    AuthGuardAdmin,
-    CatService,
-    UserService
+    SERVICES
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]

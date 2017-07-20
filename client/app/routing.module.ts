@@ -14,9 +14,14 @@ import { NotFoundComponent } from './component/not-found/not-found.component';
 import { AuthGuardLogin } from './core/services/auth-guard-login.service';
 import { AuthGuardAdmin } from './core/services/auth-guard-admin.service';
 import { UsersComponent } from "./component/users/users.component";
+import { CartComponent } from "./component/cart/cart.component";
+import { ProductComponent } from "./component/product/product.component";
+import { ProductDetailComponent } from "./component/product-detail/product-detail.component";
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: ProductComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'detail/:id', component: ProductDetailComponent },
   { path: 'users', component: UsersComponent },
   { path: 'about', component: AboutComponent },
   { path: 'cats', component: CatsComponent },

@@ -3,6 +3,9 @@
       <a routerLink="/home" class="nav-item nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
         <i class="fa fa-home"></i> Home
       </a>
+      <a routerLink="/cart" class="nav-item nav-link" routerLinkActive="active">
+         Shopping Cart
+      </a>
       <a routerLink="/users" class="nav-item nav-link" routerLinkActive="active">
         <i class="fa fa-user"></i> Users
       </a>
@@ -24,8 +27,22 @@
       <a routerLink="/about" class="nav-item nav-link" routerLinkActive="active">
         <i class="fa fa-list"></i> About
       </a>
-      <a routerLink="/cats" class="nav-item nav-link" routerLinkActive="active">
+      <!--a routerLink="/cats" class="nav-item nav-link" routerLinkActive="active">
         <i class="fa fa-list"></i> Cats
-      </a>
+      </a
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a routerLink="/cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+        </li>
+        <li>
+          <div *ngIf="totalPrice">
+            <div class="thumbnail price">
+              <strong>Total Items: </strong><span class="badge">{{totalItems}}</span> <strong>Total Price: ${{totalPrice}}</strong>
+            </div>
+          </div>
+        </li>
+        
+      </ul>-->
     </div>
+    
   </nav>
