@@ -1,0 +1,19 @@
+<div class="card">
+    <h4 class="card-header">Current products ({{products.length}})</h4>
+    <div class="card-block">
+        <div class="row">
+            <div *ngFor="let product of products">
+                <div class="col-xs-4">
+                    <div class="thumbnail product">
+                        <img width="250" height="250" src={{product.src}} />
+                        <span class="badge">{{product.id}}</span> <strong>{{product.name}}</strong>
+                        <p>{{product.info}}</p>
+                        <h1 class="badge">${{product.price}}</h1>
+                        <button (click)="addToCart(product)" class="btn btn-sm btn-primary">Add to Cart</button>
+                        <button (click)="clickedProduct(product)" class="btn btn-sm btn-success">Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
