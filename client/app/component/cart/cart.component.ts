@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from "../../core/services/products/product.service";
+import { CartStore } from '../../store/cart.store';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-cart',
@@ -7,18 +9,22 @@ import { ProductService } from "../../core/services/products/product.service";
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
+  cartSubscription: Subscription;
 
   public cart = [];
   public totalPrice;
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService, private cartStore: CartStore) { }
 
-  removeProduct(product) {
+  /*removeProduct(product) {
     this.cart.forEach((cartItem, i) => {
       if (cartItem.id === product.id) {
         this.cart.splice(i, 1)
       }
     })
+  }*/
+  removeProduct(index) {
+    this.cartStore.removeFromCart(index)
   }
 
   checkout() {
@@ -39,18 +45,22 @@ export class CartComponent implements OnInit {
   }
 
   ngOnInit() {
-
     // Get all the products added to the cart 
-    this.productService.getCart()
+    /*this.productService.getCart()
       .then(products => {
         products.forEach(product => {
           this.cart.push(product)
         })
-
         this.getTotalPrice()
-
+      })*/
+      this.cartSubscription = this.cartStore.getState().subscribe(res => {
+        this.cart = res.products;
+        this.getTotalPrice();
       })
+  }
 
+  ngOnDestroy() {
+    this.cartSubscription.unsubscribe();
   }
 
 }
