@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { JwtHelper } from 'angular2-jwt';
+import { JwtHelper } from 'angular-jwt';
 
 import { UserService } from '../services/user.service';
 
