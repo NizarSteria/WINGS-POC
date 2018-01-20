@@ -12,7 +12,7 @@
   </thead>
 
   <tbody>
-    <tr *ngFor="let product of cart ; let i = index">
+    <tr *ngFor="let product of cart">
       <td>
         <h4>{{product.id}}</h4>
       </td>
@@ -23,7 +23,7 @@
         <h4>{{product.price}}</h4>
       </td>
       <td><img src={{product.src}} width="100" height="100" /></td>
-      <td><button (click)="removeProduct(i)" class="btn btn-xs btn-danger">Remove Product</button></td>
+      <!--<td><button (click)="removeProduct(product)" class="btn btn-xs btn-danger">Remove Product</button></td>-->
     </tr>
 
     <tr class="warning">

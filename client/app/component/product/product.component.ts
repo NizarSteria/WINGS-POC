@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 
 import { ProductService } from "../../core/services/products/product.service";
 import { Product } from '../../core/models/product/product.model';
-import { CartStore } from "../../store/cart.store";
 
 @Component({
   selector: 'app-product',
@@ -16,7 +15,7 @@ export class ProductComponent implements OnInit {
 
   // Angular will know to supply an instance of the ProductService & Router when it creates a new ProductComponent
   // Because they are injected in the constructor
-  constructor(private productService: ProductService, private router: Router, private cartStore: CartStore) {
+  constructor(private productService: ProductService, private router: Router) {
   }
 
   // Dynamic route for detail info when a product is clicked
@@ -27,8 +26,7 @@ export class ProductComponent implements OnInit {
 
   // When add to cart button is clicked
   addToCart(product) {
-    // this.productService.addToCart(product)
-    this.cartStore.addToCart(product)
+    this.productService.addToCart(product)
   }
 
   getProducts() {
